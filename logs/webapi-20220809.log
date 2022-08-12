@@ -1,0 +1,153 @@
+[2022-08-09 16:35:02.656 -05:00  INF]  Now listening on: https://localhost:7131
+[2022-08-09 16:35:03.325 -05:00  INF]  Now listening on: http://localhost:5131
+[2022-08-09 16:35:03.382 -05:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-08-09 16:35:03.387 -05:00  INF]  Hosting environment: Development
+[2022-08-09 16:35:03.387 -05:00  INF]  Content root path: C:\Users\User\source\repos\App2\App2\
+[2022-08-09 16:35:05.510 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - -
+[2022-08-09 16:35:07.801 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7131/swagger/swagger-ui.css - -
+[2022-08-09 16:35:07.809 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - -
+[2022-08-09 16:35:07.811 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - -
+[2022-08-09 16:35:07.830 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - - - 200 - text/html;charset=utf-8 2210.4523ms
+[2022-08-09 16:35:07.854 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - - 200 11978 application/javascript;+charset=utf-8 44.6870ms
+[2022-08-09 16:35:08.079 -05:00  INF]  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2022-08-09 16:35:08.080 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7131/swagger/swagger-ui.css - - - 0 143632 text/css 278.9512ms
+[2022-08-09 16:35:08.283 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 471.0955ms
+[2022-08-09 16:35:08.502 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7131/swagger/favicon-16x16.png - -
+[2022-08-09 16:35:08.511 -05:00  INF]  Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+[2022-08-09 16:35:08.511 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7131/swagger/favicon-16x16.png - - - 0 665 image/png 8.7581ms
+[2022-08-09 16:35:09.230 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - -
+[2022-08-09 16:35:10.699 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1468.6236ms
+[2022-08-09 16:35:17.915 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7131/api/Categoria - -
+[2022-08-09 16:35:17.952 -05:00  INF]  Executing endpoint 'App1.Controllers.CategoriaController.GetCategorias (App2)'
+[2022-08-09 16:35:18.063 -05:00  INF]  Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategorias() on controller App1.Controllers.CategoriaController (App2).
+[2022-08-09 16:35:30.412 -05:00  INF]  Entity Framework Core 6.0.8 initialized 'PeliculasDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+[2022-08-09 16:35:39.212 -05:00  INF]  Executed DbCommand (722ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Estado], [c].[Nombre]
+FROM [Categorias] AS [c]
+ORDER BY [c].[Nombre]
+[2022-08-09 16:35:40.214 -05:00  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[App2.Models.Categoria, App2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-08-09 16:35:41.375 -05:00  INF]  Executed action App1.Controllers.CategoriaController.GetCategorias (App2) in 23270.7319ms
+[2022-08-09 16:35:41.383 -05:00  INF]  Executed endpoint 'App1.Controllers.CategoriaController.GetCategorias (App2)'
+[2022-08-09 16:35:41.437 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7131/api/Categoria - - - 200 284 application/json;+charset=utf-8 23522.4327ms
+[2022-08-09 16:36:53.616 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7131/api/Categoria/12 - -
+[2022-08-09 16:36:53.621 -05:00  INF]  Executing endpoint 'App1.Controllers.CategoriaController.GetCategoria (App2)'
+[2022-08-09 16:36:53.710 -05:00  INF]  Route matched with {action = "GetCategoria", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoria(Int32) on controller App1.Controllers.CategoriaController (App2).
+[2022-08-09 16:36:53.791 -05:00  INF]  Entity Framework Core 6.0.8 initialized 'PeliculasDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+[2022-08-09 16:36:54.455 -05:00  INF]  Executed DbCommand (261ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Estado], [c].[Nombre]
+FROM [Categorias] AS [c]
+WHERE [c].[Id] = @__id_0
+[2022-08-09 16:36:54.471 -05:00  INF]  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+[2022-08-09 16:36:54.584 -05:00  INF]  Executed action App1.Controllers.CategoriaController.GetCategoria (App2) in 873.3355ms
+[2022-08-09 16:36:54.584 -05:00  INF]  Executed endpoint 'App1.Controllers.CategoriaController.GetCategoria (App2)'
+[2022-08-09 16:36:54.585 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7131/api/Categoria/12 - - - 404 161 application/problem+json;+charset=utf-8 974.6136ms
+[2022-08-09 17:45:32.259 -05:00  DBG]  Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+[2022-08-09 17:45:32.951 -05:00  DBG]  Hosting starting
+[2022-08-09 17:45:33.950 -05:00  DBG]  Using development certificate: CN=localhost (Thumbprint: C7660477F1C0BA8D48BA81214A807F4CFB8CF560)
+[2022-08-09 17:45:34.140 -05:00  INF]  Now listening on: https://localhost:7131
+[2022-08-09 17:45:34.141 -05:00  INF]  Now listening on: http://localhost:5131
+[2022-08-09 17:45:34.141 -05:00  DBG]  Loaded hosting startup assembly App2
+[2022-08-09 17:45:34.141 -05:00  DBG]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+[2022-08-09 17:45:34.141 -05:00  DBG]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+[2022-08-09 17:45:34.142 -05:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-08-09 17:45:34.143 -05:00  INF]  Hosting environment: Development
+[2022-08-09 17:45:34.143 -05:00  INF]  Content root path: C:\Users\User\source\repos\App2\App2\
+[2022-08-09 17:45:34.143 -05:00  DBG]  Hosting started
+[2022-08-09 17:45:34.283 -05:00  DBG]  Connection id "0HMJQB3FFF60O" received FIN.
+[2022-08-09 17:45:34.331 -05:00  DBG]  Connection id "0HMJQB3FFF60O" accepted.
+[2022-08-09 17:45:34.343 -05:00  DBG]  Connection id "0HMJQB3FFF60O" started.
+[2022-08-09 17:45:34.508 -05:00  DBG]  Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+[2022-08-09 17:45:35.373 -05:00  DBG]  Connection id "0HMJQB3FFF60O" stopped.
+[2022-08-09 17:45:35.482 -05:00  DBG]  Connection id "0HMJQB3FFF60O" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-08-09 17:45:35.743 -05:00  DBG]  Connection id "0HMJQB3FFF60P" accepted.
+[2022-08-09 17:45:35.816 -05:00  DBG]  Connection id "0HMJQB3FFF60P" started.
+[2022-08-09 17:45:36.400 -05:00  DBG]  Connection 0HMJQB3FFF60P established using the following protocol: "Tls12"
+[2022-08-09 17:45:37.513 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7131/swagger/index.html - -
+[2022-08-09 17:45:37.780 -05:00  DBG]  Wildcard detected, all requests with hosts will be allowed.
+[2022-08-09 17:45:38.004 -05:00  DBG]  No candidates found for the request path '/swagger/index.html'
+[2022-08-09 17:45:38.012 -05:00  DBG]  Request did not match any endpoints
+[2022-08-09 17:45:39.008 -05:00  DBG]  Response markup is scheduled to include browser refresh script injection.
+[2022-08-09 17:45:39.945 -05:00  DBG]  Response markup was updated to include browser refresh script injection.
+[2022-08-09 17:45:39.984 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7131/swagger/index.html - - - 200 - text/html;charset=utf-8 2479.4302ms
+[2022-08-09 17:45:40.489 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7131/_vs/browserLink - -
+[2022-08-09 17:45:40.489 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - -
+[2022-08-09 17:45:40.522 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7131/_framework/aspnetcore-browser-refresh.js - - - 200 11978 application/javascript;+charset=utf-8 32.6780ms
+[2022-08-09 17:45:40.640 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7131/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 151.1963ms
+[2022-08-09 17:45:44.156 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - -
+[2022-08-09 17:45:44.161 -05:00  DBG]  No candidates found for the request path '/swagger/v1/swagger.json'
+[2022-08-09 17:45:44.161 -05:00  DBG]  Request did not match any endpoints
+[2022-08-09 17:45:45.226 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7131/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1069.8990ms
+[2022-08-09 17:46:46.985 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7131/api/Categoria - -
+[2022-08-09 17:46:47.016 -05:00  DBG]  1 candidate(s) found for the request path '/api/Categoria'
+[2022-08-09 17:46:47.050 -05:00  DBG]  Endpoint 'App1.Controllers.CategoriaController.GetCategorias (App2)' with route pattern 'api/Categoria' is valid for the request path '/api/Categoria'
+[2022-08-09 17:46:47.087 -05:00  DBG]  Request matched endpoint 'App1.Controllers.CategoriaController.GetCategorias (App2)'
+[2022-08-09 17:46:47.103 -05:00  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-08-09 17:46:47.123 -05:00  INF]  Executing endpoint 'App1.Controllers.CategoriaController.GetCategorias (App2)'
+[2022-08-09 17:46:47.238 -05:00  INF]  Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategorias() on controller App1.Controllers.CategoriaController (App2).
+[2022-08-09 17:46:47.241 -05:00  DBG]  Execution plan of authorization filters (in the following order): ["None"]
+[2022-08-09 17:46:47.243 -05:00  DBG]  Execution plan of resource filters (in the following order): ["None"]
+[2022-08-09 17:46:47.244 -05:00  DBG]  Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+[2022-08-09 17:46:47.245 -05:00  DBG]  Execution plan of exception filters (in the following order): ["None"]
+[2022-08-09 17:46:47.247 -05:00  DBG]  Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+[2022-08-09 17:46:47.251 -05:00  DBG]  Executing controller factory for controller App1.Controllers.CategoriaController (App2)
+[2022-08-09 17:46:48.296 -05:00  DBG]  An 'IServiceProvider' was created for internal use by Entity Framework.
+[2022-08-09 17:46:48.518 -05:00  DBG]  Executed controller factory for controller App1.Controllers.CategoriaController (App2)
+[2022-08-09 17:46:55.406 -05:00  INF]  Entity Framework Core 6.0.8 initialized 'PeliculasDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+[2022-08-09 17:46:55.901 -05:00  DBG]  Compiling query expression: 
+'DbSet<Categoria>()
+    .OrderBy(c => c.Nombre)'
+[2022-08-09 17:46:58.246 -05:00  DBG]  Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Categoria>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Categoria.Id (int) Required PK AfterSave:Throw, 0], [Property: Categoria.Estado (bool) Required, 1], [Property: Categoria.Nombre (string) Required, 2] }
+        SELECT c.Id, c.Estado, c.Nombre
+        FROM Categorias AS c
+        ORDER BY c.Nombre ASC), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Categoria>, 
+    App2.Models.PeliculasDBContext, 
+    False, 
+    False, 
+    True
+)'
+[2022-08-09 17:46:58.602 -05:00  DBG]  Creating DbCommand for 'ExecuteReader'.
+[2022-08-09 17:46:58.907 -05:00  DBG]  Created DbCommand for 'ExecuteReader' (290ms).
+[2022-08-09 17:46:59.003 -05:00  DBG]  Opening connection to database 'Peliculas DB' on server 'localhost'.
+[2022-08-09 17:47:01.265 -05:00  DBG]  Opened connection to database 'Peliculas DB' on server 'localhost'.
+[2022-08-09 17:47:01.356 -05:00  DBG]  Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Estado], [c].[Nombre]
+FROM [Categorias] AS [c]
+ORDER BY [c].[Nombre]
+[2022-08-09 17:47:01.886 -05:00  INF]  Executed DbCommand (506ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Estado], [c].[Nombre]
+FROM [Categorias] AS [c]
+ORDER BY [c].[Nombre]
+[2022-08-09 17:47:02.523 -05:00  DBG]  Context 'PeliculasDBContext' started tracking 'Categoria' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+[2022-08-09 17:47:02.771 -05:00  DBG]  Context 'PeliculasDBContext' started tracking 'Categoria' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+[2022-08-09 17:47:02.772 -05:00  DBG]  Context 'PeliculasDBContext' started tracking 'Categoria' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+[2022-08-09 17:47:02.773 -05:00  DBG]  Context 'PeliculasDBContext' started tracking 'Categoria' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+[2022-08-09 17:47:02.773 -05:00  DBG]  Context 'PeliculasDBContext' started tracking 'Categoria' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+[2022-08-09 17:47:02.833 -05:00  DBG]  A data reader was disposed.
+[2022-08-09 17:47:02.901 -05:00  DBG]  Closing connection to database 'Peliculas DB' on server 'localhost'.
+[2022-08-09 17:47:03.017 -05:00  DBG]  Closed connection to database 'Peliculas DB' on server 'localhost'.
+[2022-08-09 17:47:03.054 -05:00  DBG]  List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+[2022-08-09 17:47:03.075 -05:00  DBG]  Attempting to select an output formatter based on Accept header '["text/plain"]'.
+[2022-08-09 17:47:03.078 -05:00  DBG]  Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+[2022-08-09 17:47:03.079 -05:00  DBG]  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+[2022-08-09 17:47:03.079 -05:00  DBG]  Attempting to select the first formatter in the output formatters list which can write the result.
+[2022-08-09 17:47:03.082 -05:00  DBG]  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+[2022-08-09 17:47:03.083 -05:00  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[App2.Models.Categoria, App2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-08-09 17:47:04.413 -05:00  INF]  Executed action App1.Controllers.CategoriaController.GetCategorias (App2) in 17138.063ms
+[2022-08-09 17:47:04.418 -05:00  INF]  Executed endpoint 'App1.Controllers.CategoriaController.GetCategorias (App2)'
+[2022-08-09 17:47:04.450 -05:00  DBG]  'PeliculasDBContext' disposed.
+[2022-08-09 17:47:04.471 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7131/api/Categoria - - - 200 284 application/json;+charset=utf-8 17485.8807ms
+[2022-08-09 17:49:54.586 -05:00  DBG]  Connection id "0HMJQB3FFF60P" is closing.
+[2022-08-09 17:49:54.586 -05:00  DBG]  Connection id "0HMJQB3FFF60P" is closed. The last processed stream ID was 23.
+[2022-08-09 17:49:54.612 -05:00  DBG]  Connection id "0HMJQB3FFF60P" received FIN.
+[2022-08-09 17:49:54.623 -05:00  DBG]  Connection id "0HMJQB3FFF60P" sending FIN because: "The client closed the connection."
+[2022-08-09 17:49:54.639 -05:00  DBG]  Connection id "0HMJQB3FFF60P" stopped.
